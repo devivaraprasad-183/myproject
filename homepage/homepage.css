@@ -1,124 +1,96 @@
-/* Add to styles.css
-.hero h1 {
-    animation: fadeIn 2s ease-out;
-}
-
-.hero p {
-    animation: fadeIn 3s ease-out;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-} */
-
-
-  
-    /* Reset and base styling */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-    }
-
-    /* Navbar styles */
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #333;
-      padding: 10px 20px;
-      color: white;
-    }
-
-    .logo-container {
-      display: flex;
-      align-items: center;
-    }
-
-    .logo {
-      width: 40px;
-      height: 40px;
-      margin-right: 10px;
-    }
-
-    .logo-name {
-      font-size: 1.2rem;
-      font-weight: bold;
-    }
-
-    .logo-name span {
-      color: #00bfff;
-    }
-
-    .nav-buttons {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    .nav-buttons a {
-      text-decoration: none;
-      color: white;
-      background-color: #555;
-      padding: 8px 12px;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-    }
-
-    .nav-buttons a:hover {
-      background-color: #00bfff;
-    }
-
-    /* Carousel styles */
-    .carousel {
-      height: 50vh;
-      margin-top: 10px;
-      background-color: black;
-    }
-
-    .carousel-inner,
-    .carousel-item,
-    .carousel-item img {
-      height: 100%;
-    }
-
-    .carousel-item img {
-      object-fit: contain; /* Ensure full image is shown without cropping */
-      width: 100%;
-    }
-  /* from here butoton code is done */
-  /* Base Reset */
-/* * {
-  box-sizing: border-box;
+/* Reset and base styling */
+* {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-} */
+  box-sizing: border-box;
+}
 
-/* Button Section Container */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  color: white;
+  flex-wrap: wrap;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.logo-name span {
+  color: #00bfff;
+}
+
+.nav-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.nav-buttons a {
+  text-decoration: none;
+  color: white;
+  background-color: #555;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-buttons a:hover {
+  background-color: #00bfff;
+}
+
+/* Carousel styles */
+.carousel {
+  height: 40vh;
+  margin-top: 10px;
+  background-color: black;
+}
+
+.carousel-inner,
+.carousel-item,
+.carousel-item img {
+  height: 100%;
+}
+
+.carousel-item img {
+  object-fit: contain;
+  width: 100%;
+}
+
+/* Button Section */
 .button_section {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 30px;
-  padding: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+  padding: 20px;
   background: linear-gradient(to right, #f0f4ff, #e0f7fa);
 }
 
 /* Button Styling */
 .action-button {
   padding: 20px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   border: none;
   border-radius: 15px;
   background: linear-gradient(135deg, #5b6eff, #8b5cf6);
@@ -128,6 +100,8 @@
   box-shadow: 0 5px 15px rgba(91, 110, 255, 0.3);
   position: relative;
   overflow: hidden;
+  width: 100%;
+  height: 150px;
 }
 
 .action-button:hover {
@@ -135,7 +109,7 @@
   box-shadow: 0 8px 25px rgba(91, 110, 255, 0.5);
 }
 
-/* Ripple Animation on Click */
+/* Ripple Animation */
 .action-button::after {
   content: "";
   position: absolute;
@@ -155,7 +129,23 @@
   transition: 0s;
 }
 
-.action-button{
-    height: 250px;
-    width: 250px;
+/* Responsive Text Scaling */
+@media screen and (max-width: 600px) {
+  .logo-name {
+    font-size: 1rem;
+  }
+
+  .action-button {
+    height: 120px;
+    font-size: 0.9rem;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-buttons {
+    justify-content: flex-start;
+  }
 }
