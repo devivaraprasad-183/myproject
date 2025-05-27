@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 25px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.newpass {
+    font-size: 1.4rem;
+    color: #0a3d62;
+    margin-bottom: 10px;
+}
+
+label {
+    font-size: 0.95rem;
+    color: #34495e;
+    text-align: left;
+}
+
+input {
+    width: 100%;
+    padding: 8px 10px;
+    margin-top: 5px;
+    border: 2px solid #dcdde1;
+    border-radius: 10px;
+    outline: none;
+    font-size: 0.9rem;
+    transition: border-color 0.3s ease;
+}
+
+input.Account_num {
+    border-color: #ff9f43;
+    background-color: #fff9f3;
+}
+
+input.newpass,
+input.againpass {
+    border-color: #48dbfb;
+    background-color: #f0faff;
+}
+
+input:focus {
+    border-color: #38ada9;
+}
+
+.ent {
+    width: 100%;
+    padding: 10px;
+    background-color: #38ada9;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+.ent:hover {
+    background-color: #079992;
+}
+.ten {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #576574;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.ten:hover {
+    background-color: #2f3640;
+}
