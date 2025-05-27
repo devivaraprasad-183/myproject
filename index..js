@@ -15,7 +15,7 @@ btn.addEventListener('click', function () {
 
         if (password.value === repass) {
             console.log("No error at password area");
-            window.location.href = "../homepage/homepage.html";
+            window.location.href = "homepage/homepage.html";
         } else {
             alert("Your Password that you enter is Incorrect. Try again.");
         }
@@ -26,5 +26,5 @@ btn.addEventListener('click', function () {
 });
 
 forget.addEventListener('click', function () {
-    window.location.href = "../forgetpassword/forget.html";
+    window.location.href = "forgetpassword/forget.html";
 });
