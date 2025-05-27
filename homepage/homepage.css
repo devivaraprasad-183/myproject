@@ -84,14 +84,7 @@ nav {
   width: 100%;
 }
 
-/* Button Section */
-.button_section {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 25px;
-  padding: 30px 20px;
-  background: linear-gradient(to right, #e0f7fa, #e3f2fd);
-}
+
 
 /* Fancy Buttons */
 .action-button {
@@ -139,23 +132,50 @@ nav {
   transition: 0s;
 }
 
-/* Responsive text and layout */
+
+
+/* Button Section - Default */
+.button_section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 25px;
+  padding: 30px 20px;
+  background: linear-gradient(to right, #e0f7fa, #e3f2fd);
+}
+
+/* Button Style */
+.action-button {
+  padding: 25px;
+  font-size: 1.05rem;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 20px rgba(106, 17, 203, 0.3);
+  position: relative;
+  overflow: hidden;
+  height: 150px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Force 2x2 Grid for Small Screens */
 @media screen and (max-width: 600px) {
-  .logo-name {
-    font-size: 1.1rem;
-  }
-
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav-buttons {
-    justify-content: flex-start;
+  .button_section {
+    grid-template-columns: repeat(2, 1fr); /* Force 2 columns */
   }
 
   .action-button {
-    height: 120px;
+    height: 130px;
     font-size: 1rem;
   }
 }
+
+
+
+
